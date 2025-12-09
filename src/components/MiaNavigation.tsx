@@ -9,11 +9,11 @@ interface MiaNavigationProps {
   currentPanel?: 'Mia' | 'Yichen'
 }
 
-export default function MiaNavigation({ currentPanel = 'Mia' }: MiaNavigationProps) {
+export default function MiaNavigation(_props: MiaNavigationProps = {}) {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
   const { t } = useTranslation()
   const location = useLocation()
-  
+
   // 根据当前路径判断激活的链接
   const isActive = (path: string) => {
     if (path === '/') {
@@ -47,9 +47,7 @@ export default function MiaNavigation({ currentPanel = 'Mia' }: MiaNavigationPro
           textDecoration: 'none',
           transition: 'all 0.3s ease',
           boxShadow:
-            isActive('/') || hoveredLink === 'home'
-              ? 'inset 0 3px 6px rgba(0,0,0,0.4)'
-              : 'none',
+            isActive('/') || hoveredLink === 'home' ? 'inset 0 3px 6px rgba(0,0,0,0.4)' : 'none',
         }}
         onMouseEnter={() => setHoveredLink('home')}
       >
@@ -121,4 +119,3 @@ export default function MiaNavigation({ currentPanel = 'Mia' }: MiaNavigationPro
     </VStack>
   )
 }
-

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Box, Image, VStack, HStack, Spinner, Text } from '@chakra-ui/react'
-import { LAYOUT } from '../constants/layout'
+import { Box, Image, HStack, Spinner, Text } from '@chakra-ui/react'
 
 interface GalleryItem {
   id: string
@@ -17,7 +16,12 @@ interface GalleryGridProps {
   isLoading?: boolean
 }
 
-export default function GalleryGrid({ items, onLoadMore, hasMore = false, isLoading = false }: GalleryGridProps) {
+export default function GalleryGrid({
+  items,
+  onLoadMore,
+  hasMore = false,
+  isLoading = false,
+}: GalleryGridProps) {
   const [containerRef, setContainerRef] = useState<HTMLDivElement | null>(null)
 
   useEffect(() => {
@@ -58,12 +62,7 @@ export default function GalleryGrid({ items, onLoadMore, hasMore = false, isLoad
         },
       }}
     >
-      <Box
-        display="flex"
-        flexDirection="column"
-        gap={4}
-        width="100%"
-      >
+      <Box display="flex" flexDirection="column" gap={4} width="100%">
         {items.map((item, index) => {
           // 一宽一窄交错：偶数索引宽，奇数索引窄
           const isWide = index % 2 === 0
@@ -83,30 +82,35 @@ export default function GalleryGrid({ items, onLoadMore, hasMore = false, isLoad
               width={isWide ? '70%' : '50%'}
               alignSelf={isWide ? 'flex-start' : 'flex-end'}
             >
-            {item.type === 'image' ? (
-              <Image
-                src={item.src}
-                alt={item.alt || `Gallery image ${item.id}`}
-                width="100%"
-                height="auto"
-                objectFit="cover"
-                display="block"
-                loading="lazy"
-              />
-            ) : (
-              <Box
-                as="video"
-                src={item.src}
-                width="100%"
-                height="auto"
-                controls
-                preload="metadata"
-                poster={item.thumbnail}
-                style={{
-                  display: 'block',
-                }}
-              />
-            )}
+              {item.type === 'image' ? (
+                <Image
+                  src={item.src}
+                  alt={item.alt || `Gallery image ${item.id}`}
+                  width="100%"
+                  height="auto"
+                  objectFit="cover"
+                  display="block"
+                  loading="lazy"
+                />
+              ) : (
+                <Box width="100%" height="auto" as="div">
+                  <video
+                    src={item.src}
+                    width="100%"
+                    height="auto"
+                    controls
+                    preload="metadata"
+                    poster={item.thumbnail}
+                    style={{
+                      display: 'block',
+                      width: '100%',
+                      height: 'auto',
+                    }}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                </Box>
+              )}
             </Box>
           )
         })}
@@ -125,4 +129,3 @@ export default function GalleryGrid({ items, onLoadMore, hasMore = false, isLoad
     </Box>
   )
 }
-
