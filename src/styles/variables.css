@@ -1,0 +1,32 @@
+/**
+ * CSS 变量方式管理尺寸
+ * 在 :root 中定义，全局可用
+ */
+
+:root {
+  /* 宽度变量 */
+  --navigation-width: 10%;
+  --content-width: 100%;
+  --full-width: 100%;
+  
+  /* 高度变量 */
+  --header-height: 10vh;
+  --content-height: 84vh;
+  --full-height: 100vh;
+  --min-full-height: 100vh;
+  
+  /* 间距变量 */
+  --container-padding: 16px; /* 1rem */
+  --section-gap: 16px;
+  --navigation-gap: 8px;
+  
+  /* 边距变量 */
+  --content-margin-top: -7px;
+  --navigation-margin-top: 40px; /* 10 * 4px (Chakra spacing) */
+}
+
+/* 使用方式：
+ * width: var(--navigation-width);
+ * height: var(--header-height);
+ */
+

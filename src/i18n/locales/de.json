@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "gallery": "Galerie",
+    "calendar": "Kalender",
+    "contact": "Kontakt",
+    "about": "Über",
+    "news": "Nachrichten",
+    "projects": "Projekte",
+    "papers": "Publikationen"
+  },
+  "titles": {
+    "mia": "Mias Klavier Studio",
+    "yichen": "Yichens NLP Labor"
+  },
+  "contact": {
+    "info": {
+      "title": "Kontaktinformationen",
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "whatsapp": "WhatsApp"
+    },
+    "form": {
+      "title": "Nachricht senden",
+      "name": "Name",
+      "namePlaceholder": "Geben Sie Ihren Namen ein",
+      "email": "E-Mail",
+      "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+      "inquiryType": "Anfrageart",
+      "selectInquiry": "Wählen Sie eine Option",
+      "trialLesson": "Ich möchte eine Probestunde buchen",
+      "consultation": "Ich möchte eine Beratung",
+      "message": "Nachricht",
+      "messagePlaceholder": "Geben Sie Ihre Nachricht ein (optional)",
+      "send": "Nachricht senden"
+    }
+  }
+}
+

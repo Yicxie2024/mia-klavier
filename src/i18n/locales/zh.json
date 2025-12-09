@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "home": "首页",
+    "gallery": "画廊",
+    "calendar": "日历",
+    "contact": "联系",
+    "about": "关于",
+    "news": "新闻",
+    "projects": "项目",
+    "papers": "论文"
+  },
+  "titles": {
+    "mia": "Mia 钢琴工作室",
+    "yichen": "Yichen NLP Lab"
+  },
+  "contact": {
+    "info": {
+      "title": "联系信息",
+      "name": "姓名",
+      "email": "邮箱",
+      "phone": "电话",
+      "whatsapp": "WhatsApp"
+    },
+    "form": {
+      "title": "发送消息",
+      "name": "姓名",
+      "namePlaceholder": "请输入您的姓名",
+      "email": "邮箱",
+      "emailPlaceholder": "请输入您的邮箱",
+      "inquiryType": "咨询类型",
+      "selectInquiry": "请选择",
+      "trialLesson": "我想预约试课",
+      "consultation": "我想咨询",
+      "message": "消息",
+      "messagePlaceholder": "请输入您的消息（可选）",
+      "send": "发送消息"
+    }
+  }
+}

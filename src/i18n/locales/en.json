@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "calendar": "Calendar",
+    "contact": "Contact",
+    "about": "About",
+    "news": "News",
+    "projects": "Projects",
+    "papers": "Papers"
+  },
+  "titles": {
+    "mia": "Mia's Klavier Studio",
+    "yichen": "Yichen's NLP Lab"
+  },
+  "contact": {
+    "info": {
+      "title": "Contact Information",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp"
+    },
+    "form": {
+      "title": "Send a Message",
+      "name": "Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "inquiryType": "Inquiry Type",
+      "selectInquiry": "Select an option",
+      "trialLesson": "I want to book a trial lesson",
+      "consultation": "I want to consult",
+      "message": "Message",
+      "messagePlaceholder": "Enter your message (optional)",
+      "send": "Send Message"
+    }
+  }
+}
+
