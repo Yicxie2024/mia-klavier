@@ -1,0 +1,25 @@
+services:
+  # 生产环境服务
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8080:80'
+    restart: unless-stopped
+    container_name: mia-yichen-site
+
+  # 开发环境服务
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - '5173:5173'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    restart: unless-stopped
+    container_name: mia-yichen-site-dev
+    environment:
+      - NODE_ENV=development
